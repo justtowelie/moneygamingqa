@@ -1,0 +1,22 @@
+To run the suite:
+
+Please first "npm install" to ensure you've got all the required dependencies and so your node_modules builds.
+
+To run in headless simply run "npm test"
+
+To run with Cypresses viewable mode execute "node_modules\\.bin\\cypress open" into the terminal, this will open up a real time capture of the tests, allowing you to break down step by step to see what has happened.
+
+
+
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________
+I've observed that there seems to be an issue with sheets not loading on the page within a timely manner, its taking 40-50 seconds to load the sheets before executing and occasionally failing with the below error.
+"Timed out after waiting 60000ms for your remote page to load" ... "Browsers will not fire the load even until all stylesheets and scripts are done downloading" 
+
+I've been advised that this a known issue and is being looked into for resolution.
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+I've observed that regardless of the data information being passed through (as i've used faker.random generation for all data) it occasionally returns the below error. (I'm not sure if this is because its reading my IP address as already have created a customer?)
+Our system shows that an account has already been created with similar credentials. Players may only open one account each, as per our Terms and Conditions. For further help contact Customer Services.
+
+Code in theory all passes if the above 2 issues pointed out do not intervene 
