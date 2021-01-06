@@ -4,7 +4,10 @@ Please first "npm install" to ensure you've got all the required dependencies an
 
 To run in headless simply run "npm test"
 
-To run with Cypresses viewable mode execute "node_modules\\.bin\\cypress open" into the terminal, this will open up a real time capture of the tests, allowing you to break down step by step to see what has happened.
+To run with Cypresses viewable mode execute "node_modules\\.bin\\cypress open"  into the terminal > select signuptest.js under tests --, this will open up a real time capture of the tests, allowing you to break down step by step to see what has happened.
+
+Cypress dashboard command node_modules\\.bin\\cypress run --record --key 1e59b7e2-f8f9-4f75-b23a-05268d308d4e
+To view the dashboard https://dashboard.cypress.io/projects/zery85/runs/1/overview OR node_modules\\.bin\\cypress open > select runs > click the test
 
 
 
@@ -18,5 +21,7 @@ ________________________________________________________________________________
 
 I've observed that regardless of the data information being passed through (as i've used faker.random generation for all data) it occasionally returns the below error. (I'm not sure if this is because its reading my IP address as already have created a customer?)
 Our system shows that an account has already been created with similar credentials. Players may only open one account each, as per our Terms and Conditions. For further help contact Customer Services.
+
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 Code in theory all passes if the above 2 issues pointed out do not intervene 

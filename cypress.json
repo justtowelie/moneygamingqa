@@ -1,7 +1,8 @@
 {
-    "defaultCommandTimeout": 8000,
-    "env": {
-        "url" : "https://moneygaming.qa.gameaccount.com/"
-    }
-
+  "defaultCommandTimeout": 8000,
+  "reporter": "mochawesome",
+  "env": {
+    "url": "https://moneygaming.qa.gameaccount.com/"
+  },
+  "projectId": "zery85"
 }
