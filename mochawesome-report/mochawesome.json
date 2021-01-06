@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-01-06T14:15:47.740Z",
+    "end": "2021-01-06T14:17:38.460Z",
+    "duration": 110720,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1f0fae26-ecb7-4716-8ce4-b5baf7c63b08",
+      "title": "",
+      "fullFile": "cypress\\integration\\tests\\SignUpTest.js",
+      "file": "cypress\\integration\\tests\\SignUpTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "284e6aab-b2d8-4d92-97b5-d3e08cc14475",
+          "title": "Sign up user journey",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign up e2e journey",
+              "fullTitle": "Sign up user journey Sign up e2e journey",
+              "timedOut": null,
+              "duration": 108566,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var homePage = new _HomePage[\"default\"]();\nvar signUpPage = new _SignUpPage[\"default\"]();\nsignUpPage.setTitle();\nsignUpPage.setFirstName(userData.randomFirstName);\nsignUpPage.setSurname(userData.randomLastName);\nsignUpPage.setEmail(userData.randomEmail);\nsignUpPage.setTelephoneNumber(userData.randomPhoneNumber);\nsignUpPage.setMobileNumber(userData.randomMobileNumber);\nsignUpPage.setAddress(userData.randomStreetAddress);\nsignUpPage.setCity(userData.randomCity);\nsignUpPage.setCounty(userData.randomCounty);\nsignUpPage.setPostCode(userData.randomZipCode);\nsignUpPage.selectCountry('UNITED KINGDOM');\nsignUpPage.setUsername(userData.randomUser);\nsignUpPage.setPassword('L0nd0n');\nsignUpPage.reconfirmPassword('L0nd0n');\nsignUpPage.selectSecurityQuestion();\nsignUpPage.setAnswerOne(userData.randomAnswer);\nsignUpPage.selectSecurityQuestionTwo();\nsignUpPage.setAnswerTwo(userData.randomAnswer);\nsignUpPage.selectCurrency('Pounds Sterling');\nsignUpPage.verifyMarketingPreferences();\nsignUpPage.selectTermsAndConditions();\nsignUpPage.clickJoinNowButton();\nsignUpPage.confirmDobIsRequired();\nsignUpPage.selectDateOfBirth('10', 'June', '1995');\nsignUpPage.clickJoinNowButton();",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://moneygaming.qa.gameaccount.com/__cypress/runner/cypress_runner.js:156921:13)\n    at https://moneygaming.qa.gameaccount.com/__cypress/runner/cypress_runner.js:157186:14\n    at tryCatcher (https://moneygaming.qa.gameaccount.com/__cypress/runner/cypress_runner.js:10609:23)\n    at https://moneygaming.qa.gameaccount.com/__cypress/runner/cypress_runner.js:5731:41\n    at tryCatcher (https://moneygaming.qa.gameaccount.com/__cypress/runner/cypress_runner.js:10609:23)\n    at Promise._settlePromiseFromHandler (https://moneygaming.qa.gameaccount.com/__cypress/runner/cypress_runner.js:8544:31)\n    at Promise._settlePromise (https://moneygaming.qa.gameaccount.com/__cypress/runner/cypress_runner.js:8601:18)\n    at Promise._settlePromise0 (https://moneygaming.qa.gameaccount.com/__cypress/runner/cypress_runner.js:8646:10)\n    at Promise._settlePromises (https://moneygaming.qa.gameaccount.com/__cypress/runner/cypress_runner.js:8722:18)\n    at _drainQueueStep (https://moneygaming.qa.gameaccount.com/__cypress/runner/cypress_runner.js:5316:12)\n    at _drainQueue (https://moneygaming.qa.gameaccount.com/__cypress/runner/cypress_runner.js:5309:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://moneygaming.qa.gameaccount.com/__cypress/runner/cypress_runner.js:5325:5)\n    at Async.drainQueues (https://moneygaming.qa.gameaccount.com/__cypress/runner/cypress_runner.js:5195:14)",
+                "diff": null
+              },
+              "uuid": "09071c95-f4c0-444b-b878-b5fa0080b1f6",
+              "parentUUID": "284e6aab-b2d8-4d92-97b5-d3e08cc14475",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "09071c95-f4c0-444b-b878-b5fa0080b1f6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 108566,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.1.0"
+    }
+  }
+}
