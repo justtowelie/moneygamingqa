@@ -1,33 +1,15 @@
 /// <reference types="Cypress" />
-import { random } from 'faker';
-import HomePage from '../pageObjects/HomePage'
 import SignUpPage from '../pageObjects/SignUpPage'
-const faker = require('faker');
-
-let userData = {
-    randomName: faker.name.findName(),
-    randomFirstName: faker.name.firstName(),
-    randomLastName: faker.name.lastName(),
-    randomEmail: faker.internet.email(),
-    randomPhoneNumber: faker.phone.phoneNumber('0207#######'),
-    randomMobileNumber: faker.phone.phoneNumber('07715######'),
-    randomStreetAddress: faker.address.streetAddress(),
-    randomCity: faker.address.city(),
-    randomCounty: faker.address.county(),
-    randomZipCode: faker.address.zipCode(),
-    randomAnswer: faker.random.word(),
-    randomPassword: faker.random.number(),
-    randomUser: faker.random.alphaNumeric(6)
-}
+import userData from '../../support/data'
+import params from '../../support/params'
 
 describe('Sign up user journey', function()
 {
     beforeEach(function(){
-        cy.visit(Cypress.env('url')+"sign-up.shtml")
+        cy.visit(Cypress.env('url')+ params.SIGN_UP)
     })
 
     it('Sign up e2e journey', function(){
-        const homePage = new HomePage()
         const signUpPage = new SignUpPage
         signUpPage.setTitle()
         signUpPage.setFirstName(userData.randomFirstName)
@@ -39,15 +21,15 @@ describe('Sign up user journey', function()
         signUpPage.setCity(userData.randomCity)
         signUpPage.setCounty(userData.randomCounty)
         signUpPage.setPostCode(userData.randomZipCode)
-        signUpPage.selectCountry('UNITED KINGDOM')
+        signUpPage.selectCountry(userData.country)
         signUpPage.setUsername(userData.randomUser)
-        signUpPage.setPassword('L0nd0n')
-        signUpPage.reconfirmPassword('L0nd0n')
+        signUpPage.setPassword(userData.password)
+        signUpPage.reconfirmPassword(userData.password)
         signUpPage.selectSecurityQuestion()
         signUpPage.setAnswerOne(userData.randomAnswer)
         signUpPage.selectSecurityQuestionTwo()
         signUpPage.setAnswerTwo(userData.randomAnswer)
-        signUpPage.selectCurrency('Pounds Sterling')
+        signUpPage.selectCurrency(userData.currency)
         signUpPage.verifyMarketingPreferences()
         signUpPage.selectTermsAndConditions()
         signUpPage.clickJoinNowButton()
